@@ -3,8 +3,6 @@
 封装request
 """
 
-import os
-import random
 import requests
 from Common import Log
 from Common.Consts import *
