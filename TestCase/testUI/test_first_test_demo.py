@@ -38,8 +38,18 @@ class Test_first_test_demo:
         time.sleep(2)
         assertions = Assertions()
         assertions.assert_in_text(driver.page_source, '筛选搜索')
+
         # 输入优惠券名称
         ssyouhuijuan = driver.find_element_by_xpath("//label[contains(text(),'优惠券名称：')]/following-sibling::div//input")
+        ssyouhuijuan.send_keys('全品类通用券')
+
+        sousuochaxun= driver.find_element_by_xpath("//span[contains(text(),'查询搜索')]")
+        sousuochaxun.click()
+        time.sleep(2)
+
+
+
+
 
 
 
