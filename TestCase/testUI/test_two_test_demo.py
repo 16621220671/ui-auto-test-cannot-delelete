@@ -29,17 +29,16 @@ class Test_first_test_demo:
         time.sleep(1)
 
         base.click('测试', "//button/span[contains(text(),'下一步，填写商品促销')]")
-        # base.send_keys('测试', "//label[contains(text(),'商品名称：')]/following-sibling::div//input", '耳机')
 
         base.click('测试', " // span[text() = '下一步，填写商品属性']")
 
         base.click('测试', " // span[text() = '下一步，选择商品关联']")
-
+        #
         base.click('测试', " // span[text() = '完成，提交商品']")
-
-        base.click('测试', " // span[text() = '完成，提交商品']")
-
-        base.click('测试', "//span[contains(text(),'   确定')]")
+        #
+        # base.click('测试', " // span[text() = '完成，提交商品']")
+        #
+        # base.click('测试', "//span[contains(text(),'   确定')]")
 
 
 
