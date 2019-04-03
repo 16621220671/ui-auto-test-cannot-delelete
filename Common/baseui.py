@@ -25,7 +25,7 @@ class baseUI():
         self.driver = driver
 
     def local_element(self,xpath):
-       return WebDriverWait(self.driver, 5, 0.9).until(EC.presence_of_element_located((By.XPATH,xpath)))
+       return WebDriverWait(self.driver, 5, 0.5).until(EC.presence_of_element_located((By.XPATH,xpath)))
 
     @shot
     def send_keys(self,step,xpath,text):
