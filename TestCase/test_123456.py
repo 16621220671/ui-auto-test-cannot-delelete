@@ -20,16 +20,20 @@ class Test_first_test_demo:
         base.click('点击编辑', "//span[contains(text(),'编辑')]")
 
 
-        base.send_keys('输入优惠券名称', "//label[contains(text(),'优惠券名称：')]/following-sibling::div//input", '通用券')
+        base.send_keys('输入优惠券名称', "//label[contains(text(),'优惠券名称：')]/following-sibling::div//input", '通用')
 
         base.send_keys('总发行量', "//label[contains(text(),'总发行量：')]/following-sibling::div//input", '200')
-        base.send_keys('面额', "//label[contains(text(),'面额：')]/following-sibling::div//input", '20')
+        base.send_keys('面额', "//label[contains(text(),'面额：')]/following-sibling::div//input", '1000')
         base.send_keys('使用门槛', "//label[contains(text(),'使用门槛')]/following-sibling::div//input", '50')
 
         base.click('点击提交', "//span[contains(text(),'提交')]")
 
         base.click('点击确认', "//span[contains(text(),'确定')]")
 
+        # print(driver.page_source)
+        xpatha = driver.find_element_by_xpath("//div[contains(@role,'alert')]/p ")
+        # print(xpath.text)
+        Assertions.assert_in_text(xpatha.text, '修改成功')
 
 
 
