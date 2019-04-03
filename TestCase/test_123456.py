@@ -33,7 +33,8 @@ class Test_first_test_demo:
         # print(driver.page_source)
         xpatha = driver.find_element_by_xpath("//div[contains(@role,'alert')]/p ")
         # print(xpath.text)
-        Assertions.assert_in_text(xpatha.text, '修改成功')
+        assertions = Assertions()
+        assertions.assert_in_text(xpatha.text, '修改成功')
 
 
 

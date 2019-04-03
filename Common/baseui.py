@@ -263,5 +263,15 @@ class baseUI():
         :return:
         '''
         ActionChains(self.driver).move_to_element(self.local_element(xpath)).perform()
+    @shot
+    def get_text(self,step,xpath):
+        '''
+        #获取元素的展示文本
+        :param step:操作步骤
+        :param xpath:xpath
+        :return:页面元素的展示文本
+        '''
+        element = self.local_element(xpath)
+        return element.text
 
 

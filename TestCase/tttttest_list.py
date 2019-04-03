@@ -36,4 +36,4 @@ class Testdemo(object):
         # 获取响应正文  字典格式
         login_resp_json = login_resp.json()
         # .assert_in_text 用来断言字符 第一个参数填 比较多的那个字符; 第二参数填 这个字符 是否存在第一个字符里面
-        assertions.assert_in_text(login_resp_jso ['message'], msg)
+        assertions.assert_in_text(login_resp_json['message'], msg)
