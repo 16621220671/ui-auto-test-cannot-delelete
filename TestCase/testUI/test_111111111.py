@@ -26,11 +26,13 @@ class TestFirstUIDemo:
         base.click("点击待发货", "//span[text()='待发货']")
         # 点击搜索查询//span[contains(text(),'查询搜索')]
         base.click("点击搜索查询", "//span[contains(text(),'查询搜索')]")
+
+
         # 记录第一条的编号//tbody/tr[1]/td[2]/div
         num = base.get_text('获取编号', "//tbody/tr[1]/td[2]/div")
         order_num = base.get_text("获取订单编号", "//tbody/tr[1]/td[3]/div")
         # 点击第一条订单发货//tbody/tr[1]/td[10]/div/button[3]
-        base.click("点击第一条订单发货", "//tbody/tr[1]/td[10]/div/button[3]")
+        base.click("点击第一条订单发货", "//tbody/tr[1]//button[3]")
         # 点击配送方式//input[@placeholder='请选择物流公司']
         base.click("点击配送方式", "//input[@placeholder='请选择物流公司']")
         # 点击圆通快递//span[text()='圆通快递']
