@@ -16,9 +16,9 @@ def shot(func):
     def function(*args, **kwargs):
         allure.attach(args[0].driver.get_screenshot_as_png(), args[1] + '之前', allure.attachment_type.PNG)
 
-        func(*args, **kwargs)
+        res = func(*args, **kwargs)
         allure.attach(args[0].driver.get_screenshot_as_png(), args[1] + '之后', allure.attachment_type.PNG)
-
+        return res
     return function
 
 

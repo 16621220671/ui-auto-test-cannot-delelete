@@ -31,10 +31,10 @@ class Test_first_test_demo:
         base.click('点击确认', "//span[contains(text(),'确定')]")
 
         # print(driver.page_source)
-        xpatha = driver.find_element_by_xpath("//div[contains(@role,'alert')]/p ")
-        # print(xpath.text)
+        xpath = driver.find_element_by_xpath("//div[contains(@role,'alert')]/p ")
+        print(xpath.text)
         assertions = Assertions()
-        assertions.assert_in_text(xpatha.text, '修改成功')
+        assertions.assert_in_text(xpath.text)
 
 
 
