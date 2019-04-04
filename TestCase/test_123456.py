@@ -34,7 +34,7 @@ class Test_first_test_demo:
         xpath = driver.find_element_by_xpath("//div[contains(@role,'alert')]/p ")
         print(xpath.text)
         assertions = Assertions()
-        assertions.assert_in_text(xpath.text)
+        assertions.assert_in_text(xpath.text,'')
 
 
 

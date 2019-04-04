@@ -28,14 +28,23 @@ class Test_first_test_demo3:
         base.click('查询搜索', "//span[contains(text(),'查询搜索')]")
         # 点击订单发货
         base.click('订单发货', "(//span[contains(text(),'订单发货')])[1]")
-        xpatha = driver.f("(//tbody//div)[1]")
-        print('订单编号:',xpatha)
-        #
-        # # 点击确认
-        # base.click('确认', "//span[contains(text(),'确定')]")
-        # # 点击提示中确认
-        # base.click('确认', "//span[contains(text(),'确定')]")
-        # # 查看刚待发货的订单发货状态是否已经更改
+        # 取发货编号
+        xpatha = driver.find_element_by_xpath("(//tbody//div)[1]")
+        print(xpatha.text)
+        dingdanbianhao = xpatha.text
+        # 点击确认
+        base.click('确认', "//span[contains(text(),'确定')]")
+        # 点击提示中确认
+        base.click('确认', "//span[contains(text(),'确定')]")
+
+        # 查看刚待发货的订单发货状态是否已经更改
+        # 订单状态
+        base.click('订单状态', "//label[contains(text(),'订单状态')]/following-sibling::div//input")
+        base.click('待发货', "//span[contains(text(),'已发货')]")
+        base.click('查询搜索', "//span[contains(text(),'查询搜索')]")
+        assertions.assert_in_text(driver.page_source, xpatha.text)
+
+
 
 
 
