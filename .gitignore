@@ -5,7 +5,7 @@
 .DS_Store
 
 # 屏蔽缓存文件
-.pytest_cache
+test_case/.pytest_cache
 
 # 屏蔽 allure 报告文件
 report
